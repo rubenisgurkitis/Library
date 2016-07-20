@@ -1,4 +1,4 @@
-import list from './modules/List/List.js';
+import bookController from './modules/BooksController/BooksController.js';
 
-let a = new list();
+let a = new bookController();
 a.render();

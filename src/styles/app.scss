@@ -1,5 +1,53 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0px;
+}
+
+header {
+  text-align: center;
+}
+
 .footer {
+  text-align: center;
+  width: 100%;
   position: fixed;
+  left: 0px;
   height: 50px;
   top: calc(100% - 50px);
+
+  button{
+    height: 100%;
+    width: 100%;
+    border: none;
+    background-color: rgba(204, 230, 255, 0.7);
+  }
+  button:hover{
+    background-color: rgba(153, 206, 255, 0.9);
+  }
+}
+
+section {
+  background-color: #f7f7f7;
+}
+
+#book-container {
+  margin: 50px 15px;
+  overflow: scroll;
+}
+
+.book {
+  margin: 10px 5px;
+  box-sizing: border-box;
+  z-index: 1;
+  background-color: white;
+  box-shadow: 1px 1px 1px rgba(204, 230, 255, 0.7);
+  text-align: center;
+  width: 24%;
+  float: left;
+  img {
+    margin-top: 5px;
+  }
+  .buttons-container {
+    margin-bottom: 10px;
+  }
 }

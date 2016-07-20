@@ -48,7 +48,7 @@ gulp.task('babel', () => {
 
 gulp.task('watch', () => {
   gulp.watch('src/styles/app.scss', ['styles']);
-  gulp.watch('src/*.js', ['babel']);
+  gulp.watch('src/*/*/*.js', ['babel']);
 });
 
 gulp.task('default', ['styles', 'babel', 'watch', 'webserver']);

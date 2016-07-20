@@ -3,7 +3,56 @@
     {
       "id": "0",
       "title": "Space Odity",
-      "info": "asdf asdf asdf asdf adsf asdf"
+      "author": "asdf asdf asdf asdf adsf asdf",
+      "image": "src/assets/bookcover.jpg"
+    },
+    {
+      "id": "1",
+      "title": "Episodios Nacionales",
+      "author": "Camel",
+      "image": "src/assets/bookcover.jpg"
+    },
+    {
+      "id": "2",
+      "title": "Episodios Nacionales",
+      "author": "Camel",
+      "image": "src/assets/bookcover.jpg"
+    },
+    {
+      "id": "3",
+      "title": "Episodios Nacionales",
+      "author": "Camel",
+      "image": "src/assets/bookcover.jpg"
+    },
+    {
+      "id": "4",
+      "title": "Episodios Nacionales",
+      "author": "Camel",
+      "image": "src/assets/bookcover.jpg"
+    },
+    {
+      "id": "5",
+      "title": "Episodios Nacionales",
+      "author": "Camel",
+      "image": "src/assets/bookcover.jpg"
+    },
+    {
+      "id": "6",
+      "title": "Episodios Nacionales",
+      "author": "Camel",
+      "image": "src/assets/bookcover.jpg"
+    },
+    {
+      "id": "7",
+      "title": "Episodios Nacionales",
+      "author": "Camel",
+      "image": "src/assets/bookcover.jpg"
+    },
+    {
+      "id": "8",
+      "title": "Episodios Nacionales",
+      "author": "Camel",
+      "image": "src/assets/bookcover.jpg"
     }
   ]
 }
