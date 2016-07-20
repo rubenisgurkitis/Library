@@ -1,4 +1,5 @@
 import bookController from './modules/BooksController/BooksController.js';
+import $ from 'jquery';
 
-let a = new bookController();
-a.render();
+let library = new bookController();
+library.render();

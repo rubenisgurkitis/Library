@@ -18,8 +18,8 @@ gulp.task('webserver', () => {
   gulp.src('')
     .pipe(webserver({
       port: '8080',
-      livereload: true,
-      directoryListing: true,
+      livereload: false,
+      directoryListing: false,
       open: 'index.html',
       fallback: 'index.html'
     }));

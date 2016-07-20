@@ -1,58 +1,40 @@
 {
   "books": [
     {
-      "id": "0",
+      "title": "Episodios Nacionales",
+      "author": "B. P. Galdos",
+      "image": "src/assets/bookcover.jpg",
+      "id": 1
+    },
+    {
+      "title": 2001,
+      "author": "A. C. Clark",
+      "image": "src/assets/bookcover.jpg",
+      "id": 2
+    },
+    {
+      "title": "I robot",
+      "author": "Asimov",
+      "image": "src/assets/bookcover.jpg",
+      "id": 3
+    },
+    {
+      "title": "A brand new wold",
+      "author": "Huxley",
+      "image": "src/assets/bookcover.jpg",
+      "id": 9
+    },
+    {
+      "title": "The man in the high castle",
+      "author": "K. Dick",
+      "image": "src/assets/bookcover.jpg",
+      "id": 10
+    },
+    {
       "title": "Space Odity",
-      "author": "asdf asdf asdf asdf adsf asdf",
-      "image": "src/assets/bookcover.jpg"
-    },
-    {
-      "id": "1",
-      "title": "Episodios Nacionales",
-      "author": "Camel",
-      "image": "src/assets/bookcover.jpg"
-    },
-    {
-      "id": "2",
-      "title": "Episodios Nacionales",
-      "author": "Camel",
-      "image": "src/assets/bookcover.jpg"
-    },
-    {
-      "id": "3",
-      "title": "Episodios Nacionales",
-      "author": "Camel",
-      "image": "src/assets/bookcover.jpg"
-    },
-    {
-      "id": "4",
-      "title": "Episodios Nacionales",
-      "author": "Camel",
-      "image": "src/assets/bookcover.jpg"
-    },
-    {
-      "id": "5",
-      "title": "Episodios Nacionales",
-      "author": "Camel",
-      "image": "src/assets/bookcover.jpg"
-    },
-    {
-      "id": "6",
-      "title": "Episodios Nacionales",
-      "author": "Camel",
-      "image": "src/assets/bookcover.jpg"
-    },
-    {
-      "id": "7",
-      "title": "Episodios Nacionales",
-      "author": "Camel",
-      "image": "src/assets/bookcover.jpg"
-    },
-    {
-      "id": "8",
-      "title": "Episodios Nacionales",
-      "author": "Camel",
-      "image": "src/assets/bookcover.jpg"
+      "author": "D. Bowie",
+      "image": "src/assets/bookcover.jpg",
+      "id": 11
     }
   ]
 }

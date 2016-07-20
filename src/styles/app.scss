@@ -5,6 +5,16 @@ body {
 
 header {
   text-align: center;
+  position: fixed;
+  width: 100%;
+  top: 0px;
+  background-color: white;
+  opacity: 0.9;
+}
+
+section {
+  background-color: #f7f7f7;
+  margin-top: 150px;
 }
 
 .footer {
@@ -15,19 +25,19 @@ header {
   height: 50px;
   top: calc(100% - 50px);
 
-  button{
+  button {
     height: 100%;
     width: 100%;
     border: none;
     background-color: rgba(204, 230, 255, 0.7);
   }
-  button:hover{
+  button:hover {
     background-color: rgba(153, 206, 255, 0.9);
   }
-}
 
-section {
-  background-color: #f7f7f7;
+  button:focus {
+    outline: none;
+  }
 }
 
 #book-container {
@@ -50,4 +60,15 @@ section {
   .buttons-container {
     margin-bottom: 10px;
   }
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: calc(50% - 200px);
+  width: calc(400px - 100px);
+  z-index: 2;
+  height: 200px;
+  text-align: center;
+  background-color: tomato;
 }
