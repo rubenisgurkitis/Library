@@ -14,17 +14,6 @@ let transforms = [
   }
 ];
 
-gulp.task('webserver', () => {
-  gulp.src('')
-    .pipe(webserver({
-      port: '8080',
-      livereload: false,
-      directoryListing: false,
-      open: 'index.html',
-      fallback: 'index.html'
-    }));
-});
-
 gulp.task('styles', () => {
   return gulp.src('src/styles/app.scss')
     .pipe(sourcemaps.init())
@@ -51,4 +40,15 @@ gulp.task('watch', () => {
   gulp.watch('src/*/*/*.js', ['babel']);
 });
 
-gulp.task('default', ['styles', 'babel', 'watch', 'webserver']);
+gulp.task('default', ['styles', 'babel', 'watch']);
+
+gulp.task('webserver', () => {
+  gulp.src('')
+    .pipe(webserver({
+      port: '8080',
+      livereload: false,
+      directoryListing: false,
+      open: 'index.html',
+      fallback: 'index.html'
+    }));
+});

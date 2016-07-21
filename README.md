@@ -30,7 +30,8 @@ Start the gulp process
 ```
 > gulp
 ```
-Your default browser will open automatically!
-
-If no content is loaded and in the console appears an error related to an unexpected **<**.
-Cancel **gulp** and run it again. I'm working to solve this problem but I still couldn't find the solution.  
+Once the build is finish, open a new tab or terminal and:
+```
+> gulp webserver
+```
+The default browser will open automatically!!
