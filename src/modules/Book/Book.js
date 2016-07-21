@@ -7,17 +7,21 @@ export default class Book {
       this.author = book.author;
       this.image = book.image;
     }
+
     render() {
       $.get('src/modules/Book/Book.html', $.proxy((data) => {
         $('#book-container').append(data);
-        $('#newbook').attr('id', this.id);
+        let $target = $('#newbook');
+        $target.fadeIn(400);
+        $target.attr('id', this.id);
         this.fillData();
       }, this));
     }
+
     fillData() {
       let $parent = $('#' + this.id);
-      $parent.find('#title').html(this.title);
-      $parent.find('#author').html(this.author);
+      $parent.find('#title').html(this.title ? this.title : 'Title');
+      $parent.find('#author').html(this.author ? this.author : 'Author');
       $parent.find('img').attr('src', this.image);
       $parent.find('button[value="edit"]').attr('data-id', this.id);
       $parent.find('button[value="delete"]').attr('data-id', this.id);

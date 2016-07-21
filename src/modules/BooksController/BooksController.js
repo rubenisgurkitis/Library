@@ -8,6 +8,10 @@ let modal = {};
 const url = 'http://localhost:3000/books/';
 
 export default class BooksController {
+  constructor() {
+    this.render();
+  }
+
   render() {
     $.get(url, $.proxy((data) => {
       this.booksData = data;
@@ -19,6 +23,7 @@ export default class BooksController {
   }
 
   attachEvents() {
+    // Click event handler for edit and delete buttons on Book components
     $('#book-container').on('click', (e) => {
       if (e.target.value === 'delete') {
         this.deleteBook(e.target.dataset.id)
@@ -29,19 +34,22 @@ export default class BooksController {
         });
       }
     });
+    // Click event handler for the footer button
     $('#add-book-button').on('click', (e) => {
       modal = new Modal();
-      modal.render((id) => {
-        this.handleModalEvents(id);
+      modal.render((book) => {
+        this.handleModalEvents(book);
       });
     });
   }
 
   handleModalEvents(bookId) {
+    // Submit button from modal
     $('#modal-submit-button').on('click', (e) => {
       e.preventDefault();
       this.addOrUpdateBook(bookId);
     });
+    // Cancel button from modal
     $('#modal-cancel-button').on('click', (e) => {
       this.closeModal();
     });
@@ -49,6 +57,7 @@ export default class BooksController {
 
   addOrUpdateBook(bookId) {
     let values = {};
+    // Serializes on an object the values from the form inputs
     $.each($('#form').serializeArray(), function(i, field) {
       values[field.name] = field.value;
     });
@@ -61,9 +70,9 @@ export default class BooksController {
         url: url + bookId,
         data: values,
         success: (response) => {
-          console.log(response)
           this.closeModal()
-          //booksData[_.findIndex(booksData, {'id', response.id})] = response;
+          // Finds the item in the array and inserts the new data
+          this.booksData[_.findIndex(this.booksData, {'id': response.id})] = response;
           let $parent = $('#' + response.id);
           $parent.find('#title').html(response.title);
           $parent.find('#author').html(response.author);
@@ -71,9 +80,8 @@ export default class BooksController {
       })
     } else {
       $.post(url, values, (response) => {
-        console.log(response);
         this.closeModal();
-        booksData.push(response);
+        this.booksData.push(response);
         new Book(response).render();
       })
     }
@@ -83,20 +91,23 @@ export default class BooksController {
     $.ajax({
       url: url + '/' + bookId, //TODO: Change for string template
       type: 'DELETE',
-      success: (response) => {
-        $('#' + bookId).remove();
-        _.forEach(this.bookObjects, (book) => {
-          if (book.id === bookId) {
-            book = null;
-          }
-        })
-      }
+      success: $.proxy((response) => {
+        let $target = $('#' + bookId);
+        $target.fadeOut(400, () => {
+          $target.remove();
+        });
+        // Finds the item in the array and removes it
+        this.booksData.splice(_.findIndex(this.booksData, {'id': parseInt(bookId)}), 1);
+      }, this)
     })
   }
 
   closeModal() {
     modal.disableElements(false);
-    $('#modal').remove();
+    let $target = $('#modal');
+    $target.fadeOut(400, () => {
+      $target.remove();
+    });
     modal = {};
   }
 

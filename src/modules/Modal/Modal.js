@@ -4,13 +4,16 @@ export default class Modal {
   constructor(book) {
     this.book = book;
   }
+
   render(callback) {
     $.get('src/modules/Modal/Modal.html', $.proxy((data) => {
       $('section').append(data);
       this.disableElements(true);
+      $('#modal').fadeIn(400)
       if (this.book) {
         this.fillData();
       }
+      this.checkForFilledInputs();
       callback(this.book);
     }, this));
   }

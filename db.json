@@ -1,28 +1,10 @@
 {
   "books": [
     {
-      "title": "Episodios Nacionales",
-      "author": "B. P. Galdos",
-      "image": "src/assets/bookcover.jpg",
-      "id": 1
-    },
-    {
       "title": "2001, A space odity",
       "author": "A. C. Clark",
       "image": "src/assets/bookcover.jpg",
       "id": 2
-    },
-    {
-      "title": "I robot",
-      "author": "Asimov",
-      "image": "src/assets/bookcover.jpg",
-      "id": 3
-    },
-    {
-      "title": "A brand new wold",
-      "author": "Huxley",
-      "image": "src/assets/bookcover.jpg",
-      "id": 9
     },
     {
       "title": "The man in the high castle",
@@ -31,16 +13,28 @@
       "id": 10
     },
     {
-      "title": "Space Odity",
-      "author": "D. Bowie",
-      "image": "src/assets/bookcover.jpg",
-      "id": 11
-    },
-    {
       "title": "The black dahlia",
       "author": "James Ellroy",
       "image": "src/assets/bookcover.jpg",
       "id": 12
+    },
+    {
+      "title": "Foundation",
+      "author": "I. Asimov",
+      "image": "src/assets/bookcover.jpg",
+      "id": 13
+    },
+    {
+      "title": "Foundation and Empire",
+      "author": "Asimov",
+      "image": "src/assets/bookcover.jpg",
+      "id": 14
+    },
+    {
+      "title": "Pebble in the sky",
+      "author": "I. Asimov",
+      "image": "src/assets/bookcover.jpg",
+      "id": 15
     }
   ]
 }
