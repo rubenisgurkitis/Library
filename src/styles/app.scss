@@ -1,3 +1,11 @@
+$red-delete-hover: #ff8080;
+$red-delete-active: #ff4d4d;
+$blue-transparent: rgba(179, 218, 255, 0.8);
+$blue-hover: rgba(153, 206, 255, 0.9);
+$blue-active: rgba(128, 170, 255, 0.9);
+$disabled: rgba(242, 242, 242, 0.8);
+$blue-border: 2px solid $blue-transparent;
+
 body {
   font-family: 'Open Sans', sans-serif;
   margin: 0px;
@@ -8,13 +16,66 @@ header {
   position: fixed;
   width: 100%;
   top: 0px;
-  background-color: white;
+  background-color: $blue-transparent;
+  color: white;
+  font-weight: bold;
   opacity: 0.9;
 }
 
 section {
   background-color: #f7f7f7;
-  margin-top: 150px;
+  margin-top: 129px;
+
+  .button {
+    background-color: transparent;
+    border: $blue-border;
+    font-size: 16px;
+    padding: 10px 10px;
+  }
+  .button:focus {
+    outline: none;
+  }
+  .button:disabled, .button:disabled:hover{
+    background-color: $disabled;
+  }
+  .positive-button:hover {
+    background-color: $blue-hover;
+    color: white;
+  }
+  .positive-button:active {
+    background-color: $blue-active;
+    color: white;
+  }
+  .negative-button:hover {
+    background-color: $red-delete-hover;
+    color: white;
+  }
+  .negative-button:active {
+    background-color: $red-delete-active;
+    color: white;
+  }
+}
+
+#book-container {
+  margin: 50px 15px;
+  overflow: scroll;
+
+  .book {
+    margin: 10px 5px;
+    box-sizing: border-box;
+    z-index: 1;
+    background-color: white;
+    box-shadow: 1px 1px 1px $blue-transparent;
+    text-align: center;
+    width: 24%;
+    float: left;
+    img {
+      margin-top: 5px;
+    }
+    .buttons-container {
+      margin-bottom: 10px;
+    }
+  }
 }
 
 .footer {
@@ -28,11 +89,17 @@ section {
   button {
     height: 100%;
     width: 100%;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
     border: none;
-    background-color: rgba(204, 230, 255, 0.7);
+    background-color: $blue-transparent
   }
   button:hover {
-    background-color: rgba(153, 206, 255, 0.9);
+    background-color: $blue-hover
+  }
+  button:active {
+    background-color: $blue-active
   }
 
   button:focus {
@@ -40,35 +107,50 @@ section {
   }
 }
 
-#book-container {
-  margin: 50px 15px;
-  overflow: scroll;
-}
-
-.book {
-  margin: 10px 5px;
-  box-sizing: border-box;
-  z-index: 1;
-  background-color: white;
-  box-shadow: 1px 1px 1px rgba(204, 230, 255, 0.7);
-  text-align: center;
-  width: 24%;
-  float: left;
-  img {
-    margin-top: 5px;
-  }
-  .buttons-container {
-    margin-bottom: 10px;
-  }
-}
-
 .modal {
   position: fixed;
-  top: 50%;
-  left: calc(50% - 200px);
-  width: calc(400px - 100px);
+  top: calc(50% - 150px);
+  left: calc(50% - 150px);
+  width: 300px;
   z-index: 2;
-  height: 200px;
+  height: 300px;
   text-align: center;
-  background-color: tomato;
+  background-color: white;
+  border-radius:10px;
+  box-shadow: 0 3px 7px $blue-transparent;
+
+  form {
+    height: 100%;
+    width: 100%;
+
+    div {
+      height: 33.333%;
+      margin: 10px 10px;
+      box-sizing: border-box;
+      text-align: center;
+
+      label {
+        display: block;
+      }
+
+      input[type="text"] {
+        width: 60%;
+        height: 30%;
+        margin-top: 10px;
+        font-size: 16px;
+        color: black;
+        padding-left: 5px;
+        border: $blue-border;
+      }
+
+      input[type="text"]:focus {
+        outline: none;
+      }
+
+      input::-webkit-input-placeholder {
+      	font-size: 16px;
+      	color: black;
+      }
+    }
+  }
 }

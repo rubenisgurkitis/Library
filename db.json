@@ -7,7 +7,7 @@
       "id": 1
     },
     {
-      "title": 2001,
+      "title": "2001, A space odity",
       "author": "A. C. Clark",
       "image": "src/assets/bookcover.jpg",
       "id": 2
@@ -35,6 +35,12 @@
       "author": "D. Bowie",
       "image": "src/assets/bookcover.jpg",
       "id": 11
+    },
+    {
+      "title": "The black dahlia",
+      "author": "James Ellroy",
+      "image": "src/assets/bookcover.jpg",
+      "id": 12
     }
   ]
 }
